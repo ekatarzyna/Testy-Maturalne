@@ -11,15 +11,52 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int blank=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
+        public static final int background=0x7f020000;
+        public static final int blank=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int pyt10_pytanie1=0x7f020003;
+        public static final int pyt10_pytanie2=0x7f020004;
+        public static final int pyt10_pytanie3=0x7f020005;
+        public static final int pyt10_pytanie4=0x7f020006;
+        public static final int pyt1_a8sqrt2=0x7f020007;
+        public static final int pyt1_b12sqrt3=0x7f020008;
+        public static final int pyt1_c4sqrt8=0x7f020009;
+        public static final int pyt1_d4sqrt2=0x7f02000a;
+        public static final int pyt2_a=0x7f02000b;
+        public static final int pyt2_b=0x7f02000c;
+        public static final int pyt2_c=0x7f02000d;
+        public static final int pyt2_d=0x7f02000e;
+        public static final int pyt2_pyt=0x7f02000f;
+        public static final int pyt3_a=0x7f020010;
+        public static final int pyt3_b=0x7f020011;
+        public static final int pyt3_c=0x7f020012;
+        public static final int pyt3_d=0x7f020013;
+        public static final int pyt3_pytanie=0x7f020014;
+        public static final int pyt4_a=0x7f020015;
+        public static final int pyt4_b=0x7f020016;
+        public static final int pyt4_c=0x7f020017;
+        public static final int pyt4_d=0x7f020018;
+        public static final int pyt4_pytanie1=0x7f020019;
+        public static final int pyt4_pytanie2=0x7f02001a;
+        public static final int pyt6_a=0x7f02001b;
+        public static final int pyt6_b=0x7f02001c;
+        public static final int pyt6_c=0x7f02001d;
+        public static final int pyt6_d=0x7f02001e;
+        public static final int pyt6_pytanie=0x7f02001f;
+        public static final int pyt7_pytanie=0x7f020020;
+        public static final int pyt8_a=0x7f020021;
+        public static final int pyt8_b=0x7f020022;
+        public static final int pyt8_c=0x7f020023;
+        public static final int pyt8_d=0x7f020024;
+        public static final int pyt8_pytanie=0x7f020025;
+        public static final int pyt9_pytanie=0x7f020026;
+        public static final int sqrt32=0x7f020027;
     }
     public static final class id {
-        public static final int btn_nastepne=0x7f050021;
+        public static final int btn_nastepne=0x7f050020;
         public static final int btn_poprzednie=0x7f05001e;
         public static final int btn_przegladaj=0x7f050000;
         public static final int btn_sprawdz=0x7f05001f;
-        public static final int button1=0x7f050020;
         public static final int img_odpA=0x7f05000e;
         public static final int img_odpB=0x7f050013;
         public static final int img_odpC=0x7f050018;
