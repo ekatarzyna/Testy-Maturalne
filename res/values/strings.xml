@@ -3,5 +3,14 @@
 
     <string name="hello">Hello World, TestyMaturalneActivity!</string>
     <string name="app_name">Testy Maturalne</string>
+    <string name="przykladowe_pytanie">Ile wynosi x?</string>
+    <string name="sprawdz">Sprawdź</string>
+    <string name="poprzednie">Poprzednie</string>
+    <string name="nastepne">Następne</string>
+    <string name="blank"></string>
+    <string name="a">" A.  "</string>
+    <string name="b">" B.  "</string>
+    <string name="c">" C.  "</string>
+    <string name="d">" D.  "</string>
 
 </resources>
