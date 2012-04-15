@@ -1,7 +1,9 @@
 package pl.evelan.matura;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -27,6 +29,8 @@ public class ActPytania extends Activity {
 	int			odpowiedzPoprawna;
 	int			nrPytania		= 1;
 
+	MediaPlayer sound;
+	
 	// pytania
 	TextView	pytanie1, pytanie2, pytanie3, pytanie4;
 	ImageView	img_pytanie1, img_pytanie2, img_pytanie3, img_pytanie4;
@@ -35,12 +39,22 @@ public class ActPytania extends Activity {
 	ImageView	img_odpA, img_odpB, img_odpC, img_odpD;
 	TextView	tv_odpA, tv_odpB, tv_odpC, tv_odpD;
 
+	
+	// SharedPreferences
+	public static final String PUNKTACJA_NAME = "Punktacja";
+	static SharedPreferences punktacja;
+	static SharedPreferences.Editor punktacjaEditor;
+	
+	int[] tablicaPunktow = new int[1000];
+	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.pytanie);
-
+		
+		sound = MediaPlayer.create(this, R.raw.ok);
+		
 		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/StRyde.otf");
 
 		odpA = (RadioButton) findViewById(R.id.rb_odp_a);
@@ -94,8 +108,24 @@ public class ActPytania extends Activity {
 			public void onClick(View v) {
 
 				if (odpowiedzUsera == odpowiedzPoprawna) {
+					
+					sound.start();
 					Toast.makeText(getApplicationContext(), "Dobrze!", Toast.LENGTH_SHORT).show();
 					// TODO: liczenie punktów i zapisywanie do sharedpreferences
+					/*
+					punktacjaEditor = punktacja.edit();
+					punktacjaEditor.putInt("zrobione", 1);
+					punktacjaEditor.commit();
+					*/
+					
+					przygotowanieEkranu();
+					nrPytania++;
+					if (nrPytania > BazaDanych.liczbaPytan)
+						nrPytania--;
+					BazaDanych.pytanie(nrPytania, pytanie1, img_pytanie1, pytanie2, img_pytanie2, pytanie3, img_pytanie3, pytanie4, img_pytanie4);
+					BazaDanych.odpowiedzi(nrPytania, img_odpA, tv_odpA, img_odpB, tv_odpB, img_odpC, tv_odpC, img_odpD, tv_odpD);
+					odpowiedzPoprawna = BazaDanych.poprawnaOdp(nrPytania);
+					
 
 				} else {
 					if (odpowiedzUsera == 0) {

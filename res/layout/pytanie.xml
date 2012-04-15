@@ -223,29 +223,39 @@
             </LinearLayout>
         </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center" >
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
-        <Button
-            android:id="@+id/btn_poprzednie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/poprzednie" />
-
-        <Button
-            android:id="@+id/btn_sprawdz"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:text="@string/sprawdz" />
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="32dp"
+                android:gravity="center" >
 
-        <Button
-            android:id="@+id/btn_nastepne"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nastepne" />
-    </LinearLayout>
+                <Button
+                    android:id="@+id/btn_poprzednie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/poprzednie" />
+
+                <Button
+                    android:id="@+id/btn_sprawdz"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sprawdz" />
+
+                <Button
+                    android:id="@+id/btn_nastepne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nastepne" />
+            </LinearLayout>
+
+        </RelativeLayout>
 
 </LinearLayout>

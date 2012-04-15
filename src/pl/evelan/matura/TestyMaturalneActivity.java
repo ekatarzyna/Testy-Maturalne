@@ -15,6 +15,10 @@ public class TestyMaturalneActivity extends Activity {
 		setContentView(R.layout.main);
 
 		Button pytania = (Button) findViewById(R.id.btn_przegladaj);
+		Button statystyka = (Button) findViewById(R.id.btn_statystyki);
+		Button info = (Button) findViewById(R.id.btn_info);
+
+
 		pytania.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
@@ -22,6 +26,21 @@ public class TestyMaturalneActivity extends Activity {
 				startActivity(intent);
 			}
 		});
-
+		
+		statystyka.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(), ActStatystyki.class);
+				startActivity(intent);
+			}
+		});
+		
+		info.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				Intent intent = new Intent(getApplicationContext(), ActInfo.class);
+				startActivity(intent);
+			}
+		});
 	}
 }

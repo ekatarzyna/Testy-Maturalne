@@ -145,8 +145,6 @@ public class BazaDanych {
 			odpC.setText("-3");
 			odpD.setText("-2");
 			break;
-		
 		}
 	}
-
 }
