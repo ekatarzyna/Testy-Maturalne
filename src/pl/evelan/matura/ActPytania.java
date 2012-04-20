@@ -14,6 +14,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+
 public class ActPytania extends Activity {
 
 	RadioGroup	grupaOdp;
@@ -52,6 +55,11 @@ public class ActPytania extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.pytanie);
+		
+		// reklamy start
+		AdView adView = (AdView) this.findViewById(R.id.adView);
+		adView.loadAd(new AdRequest());
+		// reklamy stop
 		
 		sound = MediaPlayer.create(this, R.raw.ok);
 		

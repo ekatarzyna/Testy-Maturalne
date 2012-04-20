@@ -9,6 +9,27 @@ package pl.evelan.matura;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>BANNER</code></td><td>1</td><td></td></tr>
+<tr><td><code>IAB_MRECT</code></td><td>2</td><td></td></tr>
+<tr><td><code>IAB_BANNER</code></td><td>3</td><td></td></tr>
+<tr><td><code>IAB_LEADERBOARD</code></td><td>4</td><td></td></tr>
+</table>
+         */
+        public static final int adSize=0x7f010000;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int adUnitId=0x7f010001;
     }
     public static final class drawable {
         public static final int bacground=0x7f020000;
@@ -57,52 +78,57 @@ public final class R {
         public static final int title=0x7f02002b;
     }
     public static final class id {
-        public static final int btn_info=0x7f060006;
-        public static final int btn_nastepne=0x7f060026;
-        public static final int btn_poprzednie=0x7f060024;
-        public static final int btn_przegladaj=0x7f060004;
-        public static final int btn_sprawdz=0x7f060025;
-        public static final int btn_statystyki=0x7f060005;
-        public static final int imageView1=0x7f060001;
-        public static final int img_odpA=0x7f060015;
-        public static final int img_odpB=0x7f06001a;
-        public static final int img_odpC=0x7f06001f;
-        public static final int img_odpD=0x7f060022;
-        public static final int iv_pytanie_1=0x7f06000a;
-        public static final int iv_pytanie_2=0x7f06000c;
-        public static final int iv_pytanie_3=0x7f06000e;
-        public static final int iv_pytanie_4=0x7f060010;
-        public static final int iv_statystyka=0x7f06002d;
-        public static final int linearLayou8=0x7f060018;
-        public static final int linearLayout1=0x7f060000;
-        public static final int linearLayout10=0x7f06001c;
-        public static final int linearLayout11=0x7f06001d;
-        public static final int linearLayout2=0x7f060008;
-        public static final int linearLayout3=0x7f06000d;
-        public static final int linearLayout4=0x7f060012;
-        public static final int linearLayout5=0x7f060013;
-        public static final int linearLayout7=0x7f060017;
-        public static final int rb_odp_a=0x7f060014;
-        public static final int rb_odp_b=0x7f060019;
-        public static final int rb_odp_c=0x7f06001e;
-        public static final int rb_odp_d=0x7f060021;
-        public static final int relativeLayout1=0x7f060003;
-        public static final int textView1=0x7f060002;
-        public static final int textView2=0x7f060007;
-        public static final int textView4=0x7f060027;
-        public static final int textView6=0x7f06002a;
-        public static final int tv_odpA=0x7f060016;
-        public static final int tv_odpB=0x7f06001b;
-        public static final int tv_odpC=0x7f060020;
-        public static final int tv_odpD=0x7f060023;
-        public static final int tv_poprawne=0x7f060028;
-        public static final int tv_poprawne_proc=0x7f060029;
-        public static final int tv_przerobione=0x7f06002b;
-        public static final int tv_przerobione_proc=0x7f06002c;
-        public static final int tv_pytanie_1=0x7f060009;
-        public static final int tv_pytanie_2=0x7f06000b;
-        public static final int tv_pytanie_3=0x7f06000f;
-        public static final int tv_pytanie_4=0x7f060011;
+        public static final int BANNER=0x7f050000;
+        public static final int IAB_BANNER=0x7f050002;
+        public static final int IAB_LEADERBOARD=0x7f050003;
+        public static final int IAB_MRECT=0x7f050001;
+        public static final int adView=0x7f050028;
+        public static final int btn_info=0x7f05000a;
+        public static final int btn_nastepne=0x7f05002b;
+        public static final int btn_poprzednie=0x7f050029;
+        public static final int btn_przegladaj=0x7f050008;
+        public static final int btn_sprawdz=0x7f05002a;
+        public static final int btn_statystyki=0x7f050009;
+        public static final int imageView1=0x7f050005;
+        public static final int img_odpA=0x7f050019;
+        public static final int img_odpB=0x7f05001e;
+        public static final int img_odpC=0x7f050023;
+        public static final int img_odpD=0x7f050026;
+        public static final int iv_pytanie_1=0x7f05000e;
+        public static final int iv_pytanie_2=0x7f050010;
+        public static final int iv_pytanie_3=0x7f050012;
+        public static final int iv_pytanie_4=0x7f050014;
+        public static final int iv_statystyka=0x7f050032;
+        public static final int linearLayou8=0x7f05001c;
+        public static final int linearLayout1=0x7f050004;
+        public static final int linearLayout10=0x7f050020;
+        public static final int linearLayout11=0x7f050021;
+        public static final int linearLayout2=0x7f05000c;
+        public static final int linearLayout3=0x7f050011;
+        public static final int linearLayout4=0x7f050016;
+        public static final int linearLayout5=0x7f050017;
+        public static final int linearLayout7=0x7f05001b;
+        public static final int rb_odp_a=0x7f050018;
+        public static final int rb_odp_b=0x7f05001d;
+        public static final int rb_odp_c=0x7f050022;
+        public static final int rb_odp_d=0x7f050025;
+        public static final int relativeLayout1=0x7f050007;
+        public static final int textView1=0x7f050006;
+        public static final int textView2=0x7f05000b;
+        public static final int textView4=0x7f05002c;
+        public static final int textView6=0x7f05002f;
+        public static final int tv_odpA=0x7f05001a;
+        public static final int tv_odpB=0x7f05001f;
+        public static final int tv_odpC=0x7f050024;
+        public static final int tv_odpD=0x7f050027;
+        public static final int tv_poprawne=0x7f05002d;
+        public static final int tv_poprawne_proc=0x7f05002e;
+        public static final int tv_przerobione=0x7f050030;
+        public static final int tv_przerobione_proc=0x7f050031;
+        public static final int tv_pytanie_1=0x7f05000d;
+        public static final int tv_pytanie_2=0x7f05000f;
+        public static final int tv_pytanie_3=0x7f050013;
+        public static final int tv_pytanie_4=0x7f050015;
     }
     public static final class layout {
         public static final int info=0x7f030000;
@@ -114,24 +140,74 @@ public final class R {
         public static final int ok=0x7f040000;
     }
     public static final class string {
-        public static final int a=0x7f050007;
-        public static final int app_name=0x7f050001;
-        public static final int b=0x7f050008;
-        public static final int blank=0x7f050006;
-        public static final int c=0x7f050009;
-        public static final int d=0x7f05000a;
-        public static final int do_matury=0x7f05000e;
-        public static final int hello=0x7f050000;
-        public static final int info=0x7f05000d;
-        public static final int nastepne=0x7f050005;
-        public static final int odliczanie=0x7f05000f;
-        public static final int poprawne=0x7f050011;
-        public static final int poprzednie=0x7f050004;
-        public static final int przykladowe_pytanie=0x7f050002;
-        public static final int pytania_maturalne=0x7f05000b;
-        public static final int sprawdz=0x7f050003;
-        public static final int statystyki=0x7f05000c;
-        public static final int wynik=0x7f050010;
-        public static final int zrobione=0x7f050012;
+        public static final int a=0x7f060007;
+        public static final int app_name=0x7f060001;
+        public static final int b=0x7f060008;
+        public static final int blank=0x7f060006;
+        public static final int c=0x7f060009;
+        public static final int d=0x7f06000a;
+        public static final int do_matury=0x7f06000e;
+        public static final int hello=0x7f060000;
+        public static final int info=0x7f06000d;
+        public static final int nastepne=0x7f060005;
+        public static final int odliczanie=0x7f06000f;
+        public static final int poprawne=0x7f060011;
+        public static final int poprzednie=0x7f060004;
+        public static final int przykladowe_pytanie=0x7f060002;
+        public static final int pytania_maturalne=0x7f06000b;
+        public static final int sprawdz=0x7f060003;
+        public static final int statystyki=0x7f06000c;
+        public static final int wynik=0x7f060010;
+        public static final int zrobione=0x7f060012;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a com_google_ads_AdView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #com_google_ads_AdView_adSize pl.evelan.matura:adSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #com_google_ads_AdView_adUnitId pl.evelan.matura:adUnitId}</code></td><td></td></tr>
+           </table>
+           @see #com_google_ads_AdView_adSize
+           @see #com_google_ads_AdView_adUnitId
+         */
+        public static final int[] com_google_ads_AdView = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link pl.evelan.matura.R.attr#adSize}
+          attribute's value can be found in the {@link #com_google_ads_AdView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>BANNER</code></td><td>1</td><td></td></tr>
+<tr><td><code>IAB_MRECT</code></td><td>2</td><td></td></tr>
+<tr><td><code>IAB_BANNER</code></td><td>3</td><td></td></tr>
+<tr><td><code>IAB_LEADERBOARD</code></td><td>4</td><td></td></tr>
+</table>
+          @attr name android:adSize
+        */
+        public static final int com_google_ads_AdView_adSize = 0;
+        /**
+          <p>This symbol is the offset where the {@link pl.evelan.matura.R.attr#adUnitId}
+          attribute's value can be found in the {@link #com_google_ads_AdView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:adUnitId
+        */
+        public static final int com_google_ads_AdView_adUnitId = 1;
+    };
 }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical"
-    android:padding="2dp"
-    android:background="@drawable/background" >
-
+    android:padding="2dp" >
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -40,7 +41,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/blank" />
     </LinearLayout>
-
+
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
@@ -75,12 +76,13 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-
+
         <LinearLayout
             android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
@@ -93,14 +95,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/a"
                 android:textColor="#000" />
-
+
             <ImageView
                 android:id="@+id/img_odpA"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_launcher" />
-
+
             <TextView
                 android:id="@+id/tv_odpA"
                 android:layout_width="wrap_content"
@@ -108,7 +110,6 @@
                 android:text="@string/blank"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000" />
-
         </LinearLayout>
     </LinearLayout>
 
@@ -117,7 +118,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-
+
         <LinearLayout
             android:id="@+id/linearLayou8"
             android:layout_width="match_parent"
@@ -130,14 +131,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/b"
                 android:textColor="#000" />
-
+
             <ImageView
                 android:id="@+id/img_odpB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_launcher" />
-
+
             <TextView
                 android:id="@+id/tv_odpB"
                 android:layout_width="wrap_content"
@@ -145,117 +146,122 @@
                 android:text="@string/blank"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#000" />
-
         </LinearLayout>
     </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearLayout10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <LinearLayout
-                android:id="@+id/linearLayout11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical" >
-
-                <RadioButton
-                    android:id="@+id/rb_odp_c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/c"
-                    android:textColor="#000" />
-
-                <ImageView
-                    android:id="@+id/img_odpC"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ic_launcher" />
-
-                <TextView
-                    android:id="@+id/tv_odpC"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/blank"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#000" />
-
-            </LinearLayout>
-        </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
 
         <LinearLayout
-            android:id="@+id/linearLayout4"
+            android:id="@+id/linearLayout11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <LinearLayout
-                android:id="@+id/linearLayout5"
-                android:layout_width="match_parent"
+            android:gravity="center_vertical" >
+
+            <RadioButton
+                android:id="@+id/rb_odp_c"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical" >
+                android:text="@string/c"
+                android:textColor="#000" />
 
-                <RadioButton
-                    android:id="@+id/rb_odp_d"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/d"
-                    android:textColor="#000" />
-
-                <ImageView
-                    android:id="@+id/img_odpD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/ic_launcher" />
-
-                <TextView
-                    android:id="@+id/tv_odpD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/blank"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#000" />
+            <ImageView
+                android:id="@+id/img_odpC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
 
-            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_odpC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blank"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000" />
         </LinearLayout>
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout1"
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
 
-            <LinearLayout
-                android:id="@+id/linearLayout1"
-                android:layout_width="match_parent"
+            <RadioButton
+                android:id="@+id/rb_odp_d"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginBottom="32dp"
-                android:gravity="center" >
+                android:text="@string/d"
+                android:textColor="#000" />
 
-                <Button
-                    android:id="@+id/btn_poprzednie"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/poprzednie" />
+            <ImageView
+                android:id="@+id/img_odpD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
 
-                <Button
-                    android:id="@+id/btn_sprawdz"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sprawdz" />
+            <TextView
+                android:id="@+id/tv_odpD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/blank"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000" />
+        </LinearLayout>
+    </LinearLayout>
 
-                <Button
-                    android:id="@+id/btn_nastepne"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nastepne" />
-            </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-        </RelativeLayout>
+        <com.google.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="a14f8a9935b4b2e"
+            ads:loadAdOnCreate="true" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/adView"
+            android:layout_alignParentLeft="true"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btn_poprzednie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/poprzednie" />
+
+            <Button
+                android:id="@+id/btn_sprawdz"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sprawdz" />
+
+            <Button
+                android:id="@+id/btn_nastepne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nastepne" />
+        </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
