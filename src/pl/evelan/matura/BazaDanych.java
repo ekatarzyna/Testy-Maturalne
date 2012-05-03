@@ -9,7 +9,7 @@ public class BazaDanych {
 	//LEVEL: HARDCORE on; (Matura rozszerzona) 
 	
 	
-	static int liczbaPytan = 8;
+	static int liczbaPytan = 13; 
 	
 	static public void pytanie(int nrPytania, TextView pytanie1, ImageView img_pytanie1,
 											  TextView pytanie2, ImageView img_pytanie2,
@@ -21,14 +21,14 @@ public class BazaDanych {
 			pytanie1.setText("Liczbê ");
 			img_pytanie1.setImageResource(R.drawable.sqrt32);
 			pytanie2.setText(" mo¿na przedstawiæ w");
-			pytanie3.setText(" postaci");
+			pytanie3.setText("postaci");
 			break;
 		
 		case 2: 
 			pytanie1.setText("Potêga "); 
 			img_pytanie1.setImageResource(R.drawable.pyt2_pyt);
-			pytanie2.setText(" (gdzie x i y s¹");
-			pytanie3.setText("ró¿ne od zera) jest równa");
+			pytanie2.setText(" (gdzie x i y s¹ ró¿ne od");
+			pytanie3.setText("zera) jest równa");
 			break;
 			
 		case 3: 
@@ -41,7 +41,7 @@ public class BazaDanych {
 			img_pytanie1.setImageResource(R.drawable.pyt4_pytanie1);
 			pytanie2.setText(" dla ");
 			img_pytanie2.setImageResource(R.drawable.pyt4_pytanie2);
-			pytanie3.setText(" jest równe");
+			pytanie3.setText("jest równe");
 			break;
 		case 5: 
 			pytanie1.setText("W pewnym sklepie ceny wszystkich p³yt CD obni¿ono o 20%");
@@ -60,6 +60,35 @@ public class BazaDanych {
 			pytanie1.setText("Najwiêksz¹ liczbê ca³kowit¹ spe³niaj¹c¹ nierównoœæ ");
 			img_pytanie3.setImageResource(R.drawable.pyt8_pytanie);
 			pytanie4.setText(" jest");
+			break;
+			
+		case 9: 
+			pytanie1.setText("6% liczby x jest równe 9. Wtedy ");
+			break;
+			
+		case 10: 
+			pytanie1.setText("Iloraz ");
+			img_pytanie1.setImageResource(R.drawable.pyt10_pytanie);
+			pytanie2.setText(" jest równy");
+			break;
+			
+		case 11: 
+			pytanie1.setText("O liczbie x wiadomo, ¿e ");
+			img_pytanie1.setImageResource(R.drawable.pyt11_pytanie);
+			pytanie3.setText("zatem");
+			break;
+			
+		case 12: 
+			pytanie1.setText("Wyra¿enie ");
+			img_pytanie1.setImageResource(R.drawable.pyt12_pytanie);
+			pytanie2.setText(" jest równe");
+			pytanie3.setText("iloczynowi");
+			break;
+			
+		case 13: 
+			pytanie1.setText("Wiercho³ek paraboli o równaniu ");
+			img_pytanie3.setImageResource(R.drawable.pyt13_pytanie);
+			pytanie3.setText("ma wspó³rzêdne");
 			break;
 		/*
 		case : 
@@ -88,6 +117,12 @@ public class BazaDanych {
 		case 6: odpowiedz = 2; break;
 		case 7: odpowiedz = 1; break;
 		case 8: odpowiedz = 1; break;
+		case 9: odpowiedz = 2; break;
+		
+		case 10: odpowiedz = 2; break;
+		case 11: odpowiedz = 3; break;
+		case 12: odpowiedz = 1; break;
+		case 13: odpowiedz = 1; break;
 		}
 		return odpowiedz;
 	}
@@ -145,6 +180,42 @@ public class BazaDanych {
 			odpC.setText("-3");
 			odpD.setText("-2");
 			break;
+		case 9: 
+			odpA.setText("x = 240");
+			odpB.setText("x = 150");
+			odpC.setText("x = 24");
+			odpD.setText("x = 15");
+			break;
+			
+			
+		case 10: 
+			img_odpA.setImageResource(R.drawable.pyt10_a);
+			img_odpB.setImageResource(R.drawable.pyt10_b);
+			img_odpC.setImageResource(R.drawable.pyt10_c);
+			img_odpD.setImageResource(R.drawable.pyt10_d);
+			break;
+			
+		case 11: 
+			img_odpA.setImageResource(R.drawable.pyt11_a);
+			img_odpB.setImageResource(R.drawable.pyt11_b);
+			img_odpC.setImageResource(R.drawable.pyt11_c);
+			img_odpD.setImageResource(R.drawable.pyt11_d);
+			break;
+			
+		case 12: 
+			img_odpA.setImageResource(R.drawable.pyt12_a);
+			img_odpB.setImageResource(R.drawable.pyt12_b);
+			img_odpC.setImageResource(R.drawable.pyt12_c);
+			img_odpD.setImageResource(R.drawable.pyt12_d);
+			break;
+			
+		case 13: 
+			odpA.setText("(-1,0)");
+			odpB.setText("(0,-1)");
+			odpC.setText("(1,0)");
+			odpD.setText("(0,1)");
+			break;
+			
 		}
 	}
 }

@@ -4,14 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:orientation="vertical"
-    android:padding="2dp" >
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/title" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left" >
+        android:gravity="left"
+        android:padding="2dp" >
 
         <TextView
             android:id="@+id/tv_pytanie_1"
@@ -46,7 +52,8 @@
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left" >
+        android:gravity="left"
+        android:padding="2dp" >
 
         <ImageView
             android:id="@+id/iv_pytanie_3"
@@ -81,7 +88,8 @@
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="2dp" >
 
         <LinearLayout
             android:id="@+id/linearLayout5"
@@ -117,7 +125,8 @@
         android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="2dp" >
 
         <LinearLayout
             android:id="@+id/linearLayou8"
@@ -153,7 +162,8 @@
         android:id="@+id/linearLayout10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="2dp" >
 
         <LinearLayout
             android:id="@+id/linearLayout11"
@@ -189,7 +199,8 @@
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:padding="2dp" >
 
         <LinearLayout
             android:id="@+id/linearLayout5"
@@ -225,13 +236,14 @@
         android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
-
+
         <com.google.ads.AdView
             android:id="@+id/adView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
             ads:adSize="BANNER"
             ads:adUnitId="a14f8a9935b4b2e"
             ads:loadAdOnCreate="true" />
@@ -242,7 +254,8 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/adView"
             android:layout_alignParentLeft="true"
-            android:gravity="center" >
+            android:gravity="center"
+            android:padding="2dp" >
 
             <Button
                 android:id="@+id/btn_poprzednie"

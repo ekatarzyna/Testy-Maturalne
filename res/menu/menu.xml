@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/ocen"
+        android:icon="@drawable/favorite"
+        android:menuCategory="system"
+        android:title="Oceń">
+    </item>
+    <item
+        android:id="@+id/info"
+        android:icon="@drawable/info"
+        android:menuCategory="system"
+        android:title="Info">
+    </item>
+    <item
+        android:id="@+id/wiecej"
+        android:icon="@drawable/more"
+        android:menuCategory="system"
+        android:title="Więcej">
+    </item>
+    <item
+        android:id="@+id/exit"
+        android:icon="@drawable/exit"
+        android:menuCategory="system"
+        android:title="Wyjście">
+    </item>
+
+</menu>
