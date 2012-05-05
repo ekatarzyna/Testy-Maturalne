@@ -90,6 +90,14 @@ public class BazaDanych {
 			img_pytanie3.setImageResource(R.drawable.pyt13_pytanie);
 			pytanie3.setText("ma wspó³rzêdne");
 			break;
+			
+		case 14:
+			pytanie1.setText("Ile jest liczb naturalnych czterocyfrowych o sumie cyfr równej 2?");
+			break;
+			
+		case 15: 
+			pytanie1.setText("Œrednia arytmetyczna szeœciu liczb: 3,1,1,0,x,2 jest równa 2. Wtedy liczba x jest równa");
+			break;
 		/*
 		case : 
 			pytanie1.setText("");
@@ -118,11 +126,12 @@ public class BazaDanych {
 		case 7: odpowiedz = 1; break;
 		case 8: odpowiedz = 1; break;
 		case 9: odpowiedz = 2; break;
-		
 		case 10: odpowiedz = 2; break;
 		case 11: odpowiedz = 3; break;
 		case 12: odpowiedz = 1; break;
 		case 13: odpowiedz = 1; break;
+		case 14: odpowiedz = 4; break;
+		case 15: odpowiedz = 3; break;
 		}
 		return odpowiedz;
 	}
@@ -215,6 +224,20 @@ public class BazaDanych {
 			odpC.setText("(1,0)");
 			odpD.setText("(0,1)");
 			break;
+		case 14: 
+			odpA.setText("1");
+			odpB.setText("2");
+			odpC.setText("3");
+			odpD.setText("4");
+			break;
+		case 15: 
+			odpA.setText("3");
+			odpB.setText("4");
+			odpC.setText("5");
+			odpD.setText("6");
+			break;
+			
+		
 			
 		}
 	}

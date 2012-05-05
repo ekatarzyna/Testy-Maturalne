@@ -94,9 +94,10 @@ containing a value of this type.
         public static final int pyt8_c=0x7f02003b;
         public static final int pyt8_d=0x7f02003c;
         public static final int pyt8_pytanie=0x7f02003d;
-        public static final int sqrt32=0x7f02003e;
-        public static final int title=0x7f02003f;
-        public static final int web_hi_res_512=0x7f020040;
+        public static final int pyt9_pytanie=0x7f02003e;
+        public static final int sqrt32=0x7f02003f;
+        public static final int title=0x7f020040;
+        public static final int web_hi_res_512=0x7f020041;
     }
     public static final class id {
         public static final int BANNER=0x7f050000;
