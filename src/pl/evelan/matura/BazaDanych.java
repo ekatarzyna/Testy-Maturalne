@@ -3,13 +3,13 @@ package pl.evelan.matura;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class BazaDanych {
+public class BazaDanych { 
 	
 	//TODO:
 	//LEVEL: HARDCORE on; (Matura rozszerzona) 
 	
 	
-	static int liczbaPytan = 13; 
+	static int liczbaPytan = 20; 
 	
 	static public void pytanie(int nrPytania, TextView pytanie1, ImageView img_pytanie1,
 											  TextView pytanie2, ImageView img_pytanie2,
@@ -17,11 +17,16 @@ public class BazaDanych {
 											  TextView pytanie4, ImageView img_pytanie4) {
 		
 		switch(nrPytania) {
-		case 1: 
+		case 1:
+			//pytanie
 			pytanie1.setText("Liczbê ");
 			img_pytanie1.setImageResource(R.drawable.sqrt32);
 			pytanie2.setText(" mo¿na przedstawiæ w");
 			pytanie3.setText("postaci");
+			
+			//odpowiedzi
+			
+			
 			break;
 		
 		case 2: 
@@ -92,13 +97,41 @@ public class BazaDanych {
 			break;
 			
 		case 14:
-			pytanie1.setText("Ile jest liczb naturalnych czterocyfrowych o sumie cyfr równej 2?");
+			pytanie1.setText("Ile jest liczb naturalnych cztero- cyfrowych o sumie cyfr równej 2?");
 			break;
 			
 		case 15: 
-			pytanie1.setText("Œrednia arytmetyczna szeœciu liczb: 3,1,1,0,x,2 jest równa 2. Wtedy liczba x jest równa");
+			pytanie1.setText("Œrednia arytmetyczna szeœciu liczb:");
+			pytanie3.setText("3, 1, 1, 0, x, 2 jest równa 2. Wtedy liczba x jest równa");
 			break;
-		/*
+			
+		case 16:
+			pytanie1.setText("Liczba ");
+			img_pytanie1.setImageResource(R.drawable.pyt16_pytanie);
+			pytanie2.setText(" jest równa");
+			break;
+			
+		case 17:
+			pytanie1.setText("Najmniejsz¹ liczb¹ ca³kowit¹ nale¿¹c¹ do zbioru rozwi¹zañ nierównoœci");
+			img_pytanie3.setImageResource(R.drawable.pyt17_pytanie);
+			pytanie4.setText(" jest");
+			break;
+			
+		case 18:
+			pytanie1.setText("Funkcja liniowa okreœlona jest wzorem ");
+			img_pytanie1.setImageResource(R.drawable.pyt18_pytanie);
+			pytanie3.setText("miejscem zerowym tej funkcji jest liczba");
+			break;
+			
+		case 19:
+			pytanie1.setText("Pierwsza rata, która stanowi 9% ceny towaru, jest równa 189z³. Rower kosztuje ");
+			break;
+			
+		case 20: 
+			pytanie1.setText("Funkcja liniowa ");
+			img_pytanie1.setImageResource(R.drawable.pyt20_pytanie);
+			break;
+			/*
 		case : 
 			pytanie1.setText("");
 			img_pytanie1.setImageResource(R.drawable.);
@@ -132,6 +165,11 @@ public class BazaDanych {
 		case 13: odpowiedz = 1; break;
 		case 14: odpowiedz = 4; break;
 		case 15: odpowiedz = 3; break;
+		case 16: odpowiedz = 1; break;
+		case 17: odpowiedz = 2; break;
+		case 18: odpowiedz = 4; break;
+		case 19: odpowiedz = 2; break;
+		case 20: odpowiedz = 4; break;
 		}
 		return odpowiedz;
 	}
@@ -237,7 +275,40 @@ public class BazaDanych {
 			odpD.setText("6");
 			break;
 			
-		
+		case 16:
+			img_odpA.setImageResource(R.drawable.pyt16_a);
+			img_odpB.setImageResource(R.drawable.pyt16_b);
+			img_odpC.setImageResource(R.drawable.pyt16_c);
+			img_odpD.setImageResource(R.drawable.pyt16_d);
+			break;
+			
+		case 17:
+			odpA.setText("1");
+			odpB.setText("2");
+			odpC.setText("-1");
+			odpD.setText("-2");
+			break;
+			
+		case 18:
+			img_odpA.setImageResource(R.drawable.pyt18_a);
+			img_odpB.setImageResource(R.drawable.pyt18_b);
+			img_odpC.setImageResource(R.drawable.pyt18_c);
+			img_odpD.setImageResource(R.drawable.pyt18_d);
+			break;
+			
+		case 19:
+			odpA.setText("1701 z³");
+			odpB.setText("2100 z³");
+			odpC.setText("1890 z³");
+			odpD.setText("2091 z³");
+			break;
+			
+		case 20: 
+			odpA.setText("jest malej¹ca i jej wykres przechodzi przez punkt (0,6)");
+			odpB.setText("jest rosn¹ca i jej wykres przechodzi przez punkt (0,6)");
+			odpC.setText("jest malej¹ca i jej wykres przechodzi przez punkt (0,-6)");
+			odpD.setText("jest rosn¹ca i jej wykres przechodzi przez punkt (0,-6)");
+			break;
 			
 		}
 	}
