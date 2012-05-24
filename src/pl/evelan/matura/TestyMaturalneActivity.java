@@ -41,7 +41,7 @@ public class TestyMaturalneActivity extends Activity {
 		// do matury zosta³o
 
 		Date date1 = new Date();
-		int rok = 2012;
+		int rok = 2014;
 		Calendar calendar = new GregorianCalendar(rok, 4, 9); // pierwsza liczba normalnie, druga cyfra o jeden mniejsza, trzecia cyfra o jeden wiêksza 2012,4,9
 		long days = ((calendar.getTimeInMillis() - date1.getTime()) / 86400000);
 		zostalo.setText(days + " dni");
@@ -55,6 +55,11 @@ public class TestyMaturalneActivity extends Activity {
 		if (days == 0) {
 			zostalo_txt.setText("");
 			zostalo.setText("Szybka powtórka? :)\nBêdzie dobrze, powodzenia!");
+		}
+		
+		if (days < 0) {
+			zostalo_txt.setText("");
+			zostalo.setText("");
 		}
 
 		pytania.setOnClickListener(new OnClickListener() {
