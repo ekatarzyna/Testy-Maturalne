@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,11 +16,10 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ActStatystyki extends Activity {
 
-	TextView poprawne, poprawne_proc, przerobione, przerobione_proc;
+	TextView poprawne_txt, poprawne, poprawne_proc, przerobione_txt, przerobione, przerobione_proc;
 	ImageView statystyka;
 
 	// statystyka
@@ -34,13 +34,24 @@ public class ActStatystyki extends Activity {
 		setContentView(R.layout.statystyki);
 		super.onCreate(savedInstanceState);
 
+		poprawne_txt = (TextView) findViewById(R.id.tv_poprawne_txt);
 		poprawne = (TextView) findViewById(R.id.tv_poprawne);
 		poprawne_proc = (TextView) findViewById(R.id.tv_poprawne_proc);
+		przerobione_txt = (TextView) findViewById(R.id.tv_przerobione_txt);
 		przerobione = (TextView) findViewById(R.id.tv_przerobione);
 		przerobione_proc = (TextView) findViewById(R.id.tv_przerobione_proc);
 		//statystyka = (ImageView) findViewById(R.id.iv_statystyka);
 		Button reset = (Button) findViewById(R.id.btn_reset);
 
+		Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Rawengulk_Sans.otf"); 
+		poprawne_txt.setTypeface(font);  
+		poprawne.setTypeface(font);  
+		poprawne_proc.setTypeface(font); 
+		
+		przerobione_txt.setTypeface(font);
+		przerobione.setTypeface(font);  
+		przerobione_proc.setTypeface(font);  
+		
 		stat = getSharedPreferences(STAT_NAME, 0);
 		
 		for (int i = 0; i < BazaDanych.liczbaPytan; i++) {

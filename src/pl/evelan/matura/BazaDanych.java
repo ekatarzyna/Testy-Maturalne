@@ -3,14 +3,10 @@ package pl.evelan.matura;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class BazaDanych { 
-	
-	//TODO:
-	//LEVEL: HARDCORE on; (Matura rozszerzona) 
-	
-	
-	static int liczbaPytan = 20; 
-	
+public class BazaDanych {
+
+	static int liczbaPytan = 30; //free ograniczone do 30
+
 	static public void pytanie(int nrPytania, TextView pytanie1, ImageView img_pytanie1,
 											  TextView pytanie2, ImageView img_pytanie2,
 											  TextView pytanie3, ImageView img_pytanie3,
@@ -97,7 +93,7 @@ public class BazaDanych {
 			break;
 			
 		case 14:
-			pytanie1.setText("Ile jest liczb naturalnych cztero- cyfrowych o sumie cyfr równej 2?");
+			pytanie1.setText("Ile jest liczb naturalnych czterocyfrowych o sumie cyfr równej 2?");
 			break;
 			
 		case 15: 
@@ -118,9 +114,8 @@ public class BazaDanych {
 			break;
 			
 		case 18:
-			pytanie1.setText("Funkcja liniowa okreœlona jest wzorem ");
-			img_pytanie1.setImageResource(R.drawable.pyt18_pytanie);
-			pytanie3.setText("miejscem zerowym tej funkcji jest liczba");
+			pytanie1.setText("Miejscem zerowym tej funkcji jest liczba");
+			img_pytanie3.setImageResource(R.drawable.pyt18_pytanie);
 			break;
 			
 		case 19:
@@ -130,6 +125,61 @@ public class BazaDanych {
 		case 20: 
 			pytanie1.setText("Funkcja liniowa ");
 			img_pytanie1.setImageResource(R.drawable.pyt20_pytanie);
+			break;
+			
+		case 21: 
+			pytanie1.setText("Liczb¹ odwrotn¹ do ");
+			img_pytanie1.setImageResource(R.drawable.pyt21_pyt);
+			pytanie2.setText(" jest");
+			break;
+			
+		case 22: 
+			pytanie1.setText("Po dwukrotnej obni¿ce ceny za ka¿dym razem o 4% buty kosztowa³y 230,40z³");
+			pytanie3.setText("Ich cena pocz¹tkowa to");
+			break;
+			
+		case 23: 
+			pytanie1.setText("Wykres funkcji okreœlonej na zbiorze liczb rzeczywistych");
+			break;
+			
+		case 24: 
+			pytanie1.setText("Do zbioru rozwi¹zañ nierównoœci ");
+			img_pytanie1.setImageResource(R.drawable.pyt24_pyt);
+			pytanie3.setText("nie nale¿y liczba");
+			break;
+			
+		case 25: 
+			pytanie1.setText("Okr¹g o równaniu ");
+			img_pytanie1.setImageResource(R.drawable.pyt25_pyt);
+			break;
+			
+		case 26: 
+			pytanie1.setText("K¹t œrodkowy okrêgu jest wiêkszy od kata wpisanego opartego na tym samym ³uku o");
+			break;
+			
+		case 27: 
+			pytanie1.setText("Funkcja ");
+			img_pytanie1.setImageResource(R.drawable.pyt27_pyt);
+			pytanie2.setText(" jest rosn¹ca");
+			pytanie3.setText("w przedziale");
+			break;
+			
+		case 28: 
+			pytanie1.setText("Funkcja ");
+			img_pytanie1.setImageResource(R.drawable.pyt28_pyt);
+			pytanie3.setText("ma");
+			break;
+			
+		case 29: 
+			pytanie1.setText("Równanie ");
+			img_pytanie1.setImageResource(R.drawable.pyt29_pyt);
+			pytanie2.setText(" ma");
+			break;
+			
+		case 30: 
+			pytanie1.setText("Powierzchnia szeœcianu wynosi ");
+			img_pytanie1.setImageResource(R.drawable.pyt30_pyt);
+			pytanie3.setText("KrawêdŸ tego szeœcianu ma d³ugoœæ");
 			break;
 			/*
 		case : 
@@ -145,7 +195,7 @@ public class BazaDanych {
 		*/
 		}
 	}
-	
+
 	static public int poprawnaOdp(int nrPytania){
 		int odpowiedz = -1;
 		
@@ -170,146 +220,225 @@ public class BazaDanych {
 		case 18: odpowiedz = 4; break;
 		case 19: odpowiedz = 2; break;
 		case 20: odpowiedz = 4; break;
+		case 21: odpowiedz = 2; break;
+		case 22: odpowiedz = 1; break;
+		case 23: odpowiedz = 1; break;
+		case 24: odpowiedz = 4; break;
+		case 25: odpowiedz = 1; break;
+		case 26: odpowiedz = 3; break;
+		case 27: odpowiedz = 1; break;
+		case 28: odpowiedz = 3; break;
+		case 29: odpowiedz = 3; break;
+		case 30: odpowiedz = 2; break;
+
 		}
 		return odpowiedz;
 	}
-	
-	static public void odpowiedzi(int nrPytania, ImageView img_odpA, TextView odpA, 
-												 ImageView img_odpB, TextView odpB,
-												 ImageView img_odpC, TextView odpC,
-												 ImageView img_odpD, TextView odpD) {
-		switch(nrPytania){
-		case 1: 
+
+	static public void odpowiedzi(int nrPytania, ImageView img_odpA, TextView odpA, ImageView img_odpB, TextView odpB, ImageView img_odpC, TextView odpC,
+			ImageView img_odpD, TextView odpD) {
+		switch (nrPytania) {
+		case 1:
 			img_odpA.setImageResource(R.drawable.pyt1_a8sqrt2);
 			img_odpB.setImageResource(R.drawable.pyt1_b12sqrt3);
 			img_odpC.setImageResource(R.drawable.pyt1_c4sqrt8);
 			img_odpD.setImageResource(R.drawable.pyt1_d4sqrt2);
 			break;
-		case 2: 
+		case 2:
 			img_odpA.setImageResource(R.drawable.pyt2_a);
 			img_odpB.setImageResource(R.drawable.pyt2_b);
 			img_odpC.setImageResource(R.drawable.pyt2_c);
 			img_odpD.setImageResource(R.drawable.pyt2_d);
-			break;			
-		case 3: 
+			break;
+		case 3:
 			img_odpA.setImageResource(R.drawable.pyt3_a);
 			img_odpB.setImageResource(R.drawable.pyt3_b);
 			img_odpC.setImageResource(R.drawable.pyt3_c);
 			img_odpD.setImageResource(R.drawable.pyt3_d);
-			break;			
-		case 4: 
+			break;
+		case 4:
 			img_odpA.setImageResource(R.drawable.pyt4_a);
 			img_odpB.setImageResource(R.drawable.pyt4_b);
 			img_odpC.setImageResource(R.drawable.pyt4_c);
 			img_odpD.setImageResource(R.drawable.pyt4_d);
-			break;			
-		case 5: 
+			break;
+		case 5:
 			odpA.setText("10%");
 			odpB.setText("20%");
 			odpC.setText("30%");
 			odpD.setText("40%");
-			break;			
-		case 6: 
+			break;
+		case 6:
 			img_odpA.setImageResource(R.drawable.pyt6_a);
 			img_odpB.setImageResource(R.drawable.pyt6_b);
 			img_odpC.setImageResource(R.drawable.pyt6_c);
 			img_odpD.setImageResource(R.drawable.pyt6_d);
 			break;
-		case 7: 
+		case 7:
 			odpA.setText("nie ma rozwi¹zañ");
 			odpB.setText("ma dok³adnie jedno rozwi¹zanie");
 			odpC.setText("ma dok³adnie dwa rozwi¹zania");
 			odpD.setText("ma dok³adnie trzy rozwi¹zania");
 			break;
-		case 8: 
+		case 8:
 			odpA.setText("-5");
 			odpB.setText("-4");
 			odpC.setText("-3");
 			odpD.setText("-2");
 			break;
-		case 9: 
+		case 9:
 			odpA.setText("x = 240");
 			odpB.setText("x = 150");
 			odpC.setText("x = 24");
 			odpD.setText("x = 15");
 			break;
-			
-			
-		case 10: 
+
+		case 10:
 			img_odpA.setImageResource(R.drawable.pyt10_a);
 			img_odpB.setImageResource(R.drawable.pyt10_b);
 			img_odpC.setImageResource(R.drawable.pyt10_c);
 			img_odpD.setImageResource(R.drawable.pyt10_d);
 			break;
-			
-		case 11: 
+
+		case 11:
 			img_odpA.setImageResource(R.drawable.pyt11_a);
 			img_odpB.setImageResource(R.drawable.pyt11_b);
 			img_odpC.setImageResource(R.drawable.pyt11_c);
 			img_odpD.setImageResource(R.drawable.pyt11_d);
 			break;
-			
-		case 12: 
+
+		case 12:
 			img_odpA.setImageResource(R.drawable.pyt12_a);
 			img_odpB.setImageResource(R.drawable.pyt12_b);
 			img_odpC.setImageResource(R.drawable.pyt12_c);
 			img_odpD.setImageResource(R.drawable.pyt12_d);
 			break;
-			
-		case 13: 
-			odpA.setText("(-1,0)");
-			odpB.setText("(0,-1)");
-			odpC.setText("(1,0)");
-			odpD.setText("(0,1)");
+
+		case 13:
+			odpA.setText("(-1;0)");
+			odpB.setText("(0;-1)");
+			odpC.setText("(1;0)");
+			odpD.setText("(0;1)");
 			break;
-		case 14: 
+		case 14:
 			odpA.setText("1");
 			odpB.setText("2");
 			odpC.setText("3");
 			odpD.setText("4");
 			break;
-		case 15: 
+		case 15:
 			odpA.setText("3");
 			odpB.setText("4");
 			odpC.setText("5");
 			odpD.setText("6");
 			break;
-			
+
 		case 16:
 			img_odpA.setImageResource(R.drawable.pyt16_a);
 			img_odpB.setImageResource(R.drawable.pyt16_b);
 			img_odpC.setImageResource(R.drawable.pyt16_c);
 			img_odpD.setImageResource(R.drawable.pyt16_d);
 			break;
-			
+
 		case 17:
 			odpA.setText("1");
 			odpB.setText("2");
 			odpC.setText("-1");
 			odpD.setText("-2");
 			break;
-			
+
 		case 18:
 			img_odpA.setImageResource(R.drawable.pyt18_a);
 			img_odpB.setImageResource(R.drawable.pyt18_b);
 			img_odpC.setImageResource(R.drawable.pyt18_c);
 			img_odpD.setImageResource(R.drawable.pyt18_d);
 			break;
-			
+
 		case 19:
 			odpA.setText("1701 z³");
 			odpB.setText("2100 z³");
 			odpC.setText("1890 z³");
 			odpD.setText("2091 z³");
 			break;
-			
-		case 20: 
-			odpA.setText("jest malej¹ca i jej wykres przechodzi przez punkt (0,6)");
-			odpB.setText("jest rosn¹ca i jej wykres przechodzi przez punkt (0,6)");
-			odpC.setText("jest malej¹ca i jej wykres przechodzi przez punkt (0,-6)");
-			odpD.setText("jest rosn¹ca i jej wykres przechodzi przez punkt (0,-6)");
+
+		case 20:
+			odpA.setText("jest malej¹ca i jej wykres przechodzi przez punkt (0;6)");
+			odpB.setText("jest rosn¹ca i jej wykres przechodzi przez punkt (0;6)");
+			odpC.setText("jest malej¹ca i jej wykres przechodzi przez punkt (0;-6)");
+			odpD.setText("jest rosn¹ca i jej wykres przechodzi przez punkt (0;-6)");
 			break;
-			
+
+		case 21:
+			img_odpA.setImageResource(R.drawable.pyt21_a);
+			img_odpB.setImageResource(R.drawable.pyt21_b);
+			img_odpC.setImageResource(R.drawable.pyt21_c);
+			img_odpD.setImageResource(R.drawable.pyt21_d);
+			break;
+
+		case 22:
+			odpA.setText("250z³");
+			odpB.setText("270z³");
+			odpC.setText("290z³");
+			odpD.setText("202,40z³");
+			break;
+
+		case 23:
+			odpA.setText("musi mieæ punkt wspólny z osi¹ OY");
+			odpB.setText("mo¿e mieæ dwa punkty wspólne z osi¹ OY");
+			odpC.setText("musi mieæ punkt wspólny z osi¹ OX");
+			odpD.setText("przechodzi przez pocz¹tek uk³adu wspó³rzêdnych");
+			break;
+
+		case 24:
+			img_odpA.setImageResource(R.drawable.pyt24_a);
+			img_odpB.setImageResource(R.drawable.pyt24_b);
+			img_odpC.setImageResource(R.drawable.pyt24_c);
+			img_odpD.setImageResource(R.drawable.pyt24_d);
+			break;
+
+		case 25:
+			odpA.setText("nie przecina osi OX");
+			odpB.setText("nie przecina osi OY");
+			odpC.setText("przechodzi przez pocz¹tek uk³adu wspó³rzêdnych");
+			odpD.setText("przechodzi przez punkt (-1;-2)");
+			break;
+
+		case 26:
+			odpA.setText("200%");
+			odpB.setText("150%");
+			odpC.setText("100%");
+			odpD.setText("50%");
+			break;
+
+		case 27:
+			img_odpA.setImageResource(R.drawable.pyt27_a);
+			img_odpB.setImageResource(R.drawable.pyt27_b);
+			img_odpC.setImageResource(R.drawable.pyt27_c);
+			img_odpD.setImageResource(R.drawable.pyt27_d);
+			break;
+
+		case 28:
+			odpA.setText("1 miejsce zerowe");
+			odpB.setText("2 miejsca zerowe");
+			odpC.setText("3 miejsca zerowe");
+			odpD.setText("4 miejsca zerowe");
+			break;
+
+		case 29:
+			odpA.setText("2 pierwiastki");
+			odpB.setText("3 pierwiastki");
+			odpC.setText("1 pierwiastek");
+			odpD.setText("4 pierwiastki");
+
+			break;
+
+		case 30:
+			odpA.setText("4cm");
+			odpB.setText("5cm");
+			odpC.setText("5,5cm");
+			odpD.setText("6cm");
+			break;
+
 		}
 	}
 }

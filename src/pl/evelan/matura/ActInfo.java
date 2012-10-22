@@ -2,6 +2,7 @@ package pl.evelan.matura;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class ActInfo extends Activity {
 
@@ -18,6 +20,11 @@ public class ActInfo extends Activity {
 		setContentView(R.layout.info);
 		super.onCreate(savedInstanceState);
 		Button email = (Button) findViewById(R.id.btn_email);
+		
+		TextView info = (TextView) findViewById(R.id.info_txt);
+		Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Rawengulk_Sans.otf"); 
+		//Rawengulk_Sans.otf
+		info.setTypeface(font);  
 		
 		email.setOnClickListener(new OnClickListener() {
 

@@ -19,9 +19,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdView;
-
 public class ActPytania extends Activity {
 
 	RadioGroup grupaOdp;
@@ -29,6 +26,8 @@ public class ActPytania extends Activity {
 	RadioButton odpB;
 	RadioButton odpC;
 	RadioButton odpD;
+	
+	//TODO: zapisywanie ostatniego pytania przy wychodzeniu
 
 	// TextView pytanie;
 	// ImageView pytanie;
@@ -36,6 +35,7 @@ public class ActPytania extends Activity {
 	int odpowiedzUsera = 0;
 	int odpowiedzPoprawna;
 	int nrPytania = 1;
+	int ostatniePytanie = 1; 
 
 	MediaPlayer sound;
 
@@ -43,6 +43,11 @@ public class ActPytania extends Activity {
 	public static final String STAT_NAME = "Statystyka";
 	static SharedPreferences stat;
 	static SharedPreferences.Editor statEditor;
+	
+	//ostatnie pytanie
+	public static final String MEMORY_NAME = "PytanieMem";
+	static SharedPreferences mem;
+	static SharedPreferences.Editor memEditor;
 
 	// pytania
 	TextView pytanie1, pytanie2, pytanie3, pytanie4;
@@ -59,14 +64,15 @@ public class ActPytania extends Activity {
 		setContentView(R.layout.pytanie);
 
 		// reklamy start
-		AdView adView = (AdView) this.findViewById(R.id.adView);
-		adView.loadAd(new AdRequest());
+		//AdView adView = (AdView) this.findViewById(R.id.adView);
+		//adView.loadAd(new AdRequest());
 		// reklamy stop
 
 		sound = MediaPlayer.create(this, R.raw.ok);
 
 		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/StRyde.otf");
-
+		//Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/Rawengulk_Sans.otf");
+ 
 		odpA = (RadioButton) findViewById(R.id.rb_odp_a);
 		odpA.setTypeface(tf);
 		odpB = (RadioButton) findViewById(R.id.rb_odp_b);

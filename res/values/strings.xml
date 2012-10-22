@@ -15,14 +15,14 @@
     <string name="pytania_maturalne">Pytania maturalne</string>
     <string name="statystyki">Statystyki</string>
     <string name="info">Informacje</string>
-    <string name="do_matury">Do matury pozostało:</string>
+    <string name="do_matury">Do matury jeszcze:</string>
     <string name="odliczanie">20 dni</string>
     <string name="wynik">"Wynik: "</string>
     <string name="poprawne">Poprawne: </string>
     <string name="zrobione">Przerobione: </string>
     <string name="reset_stat">Wyczyść statystyki</string>
     <string name="stat_graph">&lt;miejsce na wykres></string>
-    <string name="info_tresc">Przepraszam, że aplikacja wygląda jak wygląda ale spieszyłem się żeby zdązyć przed maturą z matematyki :) Skupiam się teraz głównie na dodawaniu nowych pytań + szybkie poprawki. Powodzenia na maturze!</string>
+    <string name="info_tresc">Aplikacja może nie jest najpiękniejsza ze wszystkich a formatowanie pytań zostawia wiele do życznia ale działa. Powodzenia na maturze!</string>
     <string name="kontakt">Wyślij do mnie e-maila</string>
 
 </resources>

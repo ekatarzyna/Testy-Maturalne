@@ -7,6 +7,7 @@ import java.util.GregorianCalendar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,6 +25,8 @@ public class TestyMaturalneActivity extends Activity {
 	public static final String STAT_NAME = "Statystyka";
 	static SharedPreferences stat;
 	static SharedPreferences.Editor statEditor;
+	
+	 
 
 	int przerobionePytania = 0;
 
@@ -37,11 +40,15 @@ public class TestyMaturalneActivity extends Activity {
 		Button info = (Button) findViewById(R.id.btn_info);
 		TextView zostalo = (TextView) findViewById(R.id.tv_zostalo);
 		TextView zostalo_txt = (TextView) findViewById(R.id.tv_zostalo_text);
+		
+		Typeface font = Typeface.createFromAsset(getAssets(), "fonts/visitor.ttf"); 
+		zostalo.setTypeface(font);  
+		zostalo_txt.setTypeface(font);  
 
 		// do matury zosta³o
 
 		Date date1 = new Date();
-		int rok = 2014;
+		int rok = 2013;
 		Calendar calendar = new GregorianCalendar(rok, 4, 9); // pierwsza liczba normalnie, druga cyfra o jeden mniejsza, trzecia cyfra o jeden wiêksza 2012,4,9
 		long days = ((calendar.getTimeInMillis() - date1.getTime()) / 86400000);
 		zostalo.setText(days + " dni");
