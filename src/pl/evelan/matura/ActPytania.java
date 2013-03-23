@@ -63,11 +63,6 @@ public class ActPytania extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.pytanie);
 
-		// reklamy start
-		//AdView adView = (AdView) this.findViewById(R.id.adView);
-		//adView.loadAd(new AdRequest());
-		// reklamy stop
-
 		sound = MediaPlayer.create(this, R.raw.ok);
 
 		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/StRyde.otf");

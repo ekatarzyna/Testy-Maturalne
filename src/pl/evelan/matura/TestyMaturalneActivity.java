@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,13 +39,14 @@ public class TestyMaturalneActivity extends Activity {
 		Button pytania = (Button) findViewById(R.id.btn_przegladaj);
 		Button statystyka = (Button) findViewById(R.id.btn_statystyki);
 		Button info = (Button) findViewById(R.id.btn_info);
+		ImageView premium = (ImageView) findViewById(R.id.btn_premium);
 		TextView zostalo = (TextView) findViewById(R.id.tv_zostalo);
 		TextView zostalo_txt = (TextView) findViewById(R.id.tv_zostalo_text);
 		
 		Typeface font = Typeface.createFromAsset(getAssets(), "fonts/visitor.ttf"); 
 		zostalo.setTypeface(font);  
 		zostalo_txt.setTypeface(font);  
-
+		
 		// do matury zosta³o
 
 		Date date1 = new Date();
@@ -80,7 +82,7 @@ public class TestyMaturalneActivity extends Activity {
 		statystyka.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
-
+				przerobionePytania = 0;
 				stat = getSharedPreferences(STAT_NAME, 0);
 
 				for (int i = 0; i < BazaDanych.liczbaPytan; i++) {
@@ -103,8 +105,19 @@ public class TestyMaturalneActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+		
+		premium.setOnClickListener(new OnClickListener() {
+			
+			public void onClick(View v) {
+				Intent intent_premium = new Intent(Intent.ACTION_VIEW);
+				intent_premium.setData(Uri.parse("market://details?id=pl.evelan.matura.pro"));
+				startActivity(intent_premium);				
+			}
+		});
 
 	}
+	
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
